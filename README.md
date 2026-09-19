@@ -1,32 +1,53 @@
-# React + TypeScript + Vite
+# CleanPix (rm-crimg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A minimal, frontend-only image cleaner built with Vite + React. Strips AI-generated markers, Content Credentials (C2PA), EXIF data, GPS coordinates, camera specs, and edit history through a pure pixel-level canvas copy.
 
-Currently, two official plugins are available:
+**100% Client-Side • Zero Backend • Zero Data Leaving Your Device**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 3-Step Workflow
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Upload** — Drag-and-drop, browse, or paste (`Ctrl+V` / `⌘V`) any JPG, PNG, or WebP image.
+2. **Process** — The browser decodes the image in memory and draws only the raw RGBA pixels onto an isolated HTML5 canvas. Every metadata header, C2PA manifest, and tracking tag is discarded.
+3. **Download** — Download or copy the clean image. Any platform reading it sees a standard, untraceable image with zero provenance attached.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Features
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- **True Pixel-Level Clone**: Canvas raster buffer transfer leaves behind 100% of headers (EXIF, IPTC, XMP, C2PA).
+- **Clipboard Support**: Paste an image directly anywhere on the page, and copy cleaned images back to your clipboard with one click.
+- **Format Flexibility**: Preserve original format or switch seamlessly between PNG (lossless), JPG (95%), or WebP.
+- **Minimal & Clean Design**: Crisp white aesthetic, high-contrast typography, single electric blue accent, works seamlessly across mobile and desktop.
+- **Zero Server Footprint**: Deploy anywhere as static files (Vercel, Cloudflare Pages, Netlify, GitHub Pages).
+
+---
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start local dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## Deploy to Vercel
+
+Because this is a 100% static frontend app, you can deploy it to Vercel instantly:
+
+1. Push this repository to GitHub/GitLab.
+2. Import the repo into Vercel.
+3. Framework Preset: **Vite**
+4. Build Command: `npm run build`
+5. Output Directory: `dist`
