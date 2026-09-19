@@ -1,5 +1,7 @@
 # rm-crImg
 
+A minimal, 100% client-side image provenance cleaner built with Vite + React. Strips AI-generated watermarks, C2PA Content Credentials, EXIF headers, GPS locations, and edit history via an isolated pixel-level canvas copy. Zero backend, zero server storage, zero data leakage.
+
 <p align="center">
 
   <!-- Core -->
@@ -30,8 +32,6 @@
   <img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red?style=for-the-badge" alt="Open Source Love" />
 
 </p>
-
-A minimal, 100% client-side image provenance cleaner built with Vite + React. Strips AI-generated watermarks, C2PA Content Credentials, EXIF headers, GPS locations, and edit history via an isolated pixel-level canvas copy. Zero backend, zero server storage, zero data leakage.
 
 ---
 
