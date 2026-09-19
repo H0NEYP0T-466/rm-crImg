@@ -1,0 +1,59 @@
+name: "Feature request"
+description: "Propose an enhancement or new capability for rm-crImg"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to make **rm-crImg** better? We would love to hear it! Please fill out the form below.
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: Is your feature request related to a specific limitation or pain point?
+      placeholder: I am always frustrated when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution & UX Flow
+      description: Describe the solution you'd like to see, including how the user would interact with it.
+      placeholder: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives-considered
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or workarounds you've thought about.
+      placeholder: Other ways this could be accomplished.
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope & Out-of-Scope
+      description: Define what should be included in this enhancement and what explicitly should NOT be included.
+      placeholder: |
+        In Scope:
+        - ...
+
+        Out of Scope:
+        - ...
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & Privacy Considerations
+      description: Does this feature risk compromising our 100% client-side, zero-server privacy architecture?
+      placeholder: Discuss performance, browser compatibility, or privacy implications.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any mockups, links, screenshots, or other references.

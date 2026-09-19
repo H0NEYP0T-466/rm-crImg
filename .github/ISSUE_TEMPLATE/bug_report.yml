@@ -1,0 +1,94 @@
+name: "Bug report"
+description: "Report a reproducible problem in rm-crImg"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue! Please provide as much detail as possible to help us reproduce and resolve the problem quickly.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A clear and concise description of the bug.
+      placeholder: e.g. PNG alpha channel turns black when converting to JPG
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Detail the steps required to trigger the bug.
+      placeholder: |
+        1. Upload a transparent PNG file
+        2. Select output format as ...
+        3. Click 'Download Clean Image'
+        4. Observe unexpected output
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: Transparent areas should fill with white or maintain transparency.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severely does this bug affect usability?
+      options:
+        - Critical (Crash, data corruption, total blockage)
+        - High (Core cleaning function fails for specific image types)
+        - Medium (UI glitch, minor formatting inconsistency)
+        - Low (Trivial visual annoyance, typo)
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment & Device Details
+      description: Provide browser, device, and OS details.
+      value: |
+        - OS: [e.g. macOS Sonoma, Windows 11, Ubuntu 24.04, iOS 18]
+        - Browser: [e.g. Chrome 128, Safari 18, Firefox 130]
+        - Image format: [e.g. JPG, PNG, WebP]
+        - Image dimensions / file size: [e.g. 4096x2160, 4.2 MB]
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Browser Console Logs
+      description: If applicable, paste any errors from your browser Developer Tools console.
+      render: shell
+      placeholder: Paste console errors or stack traces here...
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Sample Image
+      description: Drag and drop screenshots or sample images here (please ensure sample does not contain sensitive personal data).
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context, workarounds, or thoughts on the issue.
